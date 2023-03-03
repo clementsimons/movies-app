@@ -28,12 +28,17 @@ const MovieCategories = () => {
             <div className={styles["movie-categories"]} >
                 <MultipleSelect options={moviesContext.categories} selectedOptions={moviesContext.selectedCategories} optionClickHandler={optionClickHandler} />
                 {
-                    moviesContext.selectedCategories.map((selectedCategory, index) => {
-                        return <div key={index} className={styles["selected-category"]} > 
-                            <p>{selectedCategory}</p>
-                            <img src={checkedIcon} alt="checked" />
-                        </div>
-                    })
+                    moviesContext.selectedCategories.length > 0 &&
+                    <div className={styles["selected-categories"]} >
+                        {
+                            moviesContext.selectedCategories.map((selectedCategory, index) => {
+                                return <div key={index} className={styles["selected-category"]} > 
+                                    <p>{selectedCategory}</p>
+                                    <img src={checkedIcon} alt="checked" />
+                                </div>
+                            })
+                        }
+                    </div>
                 }
             </div>
         </>

@@ -9,6 +9,10 @@
     margin: 2% 0 2% 17%;
 }
 
+.selected-categories {
+    display: flex;
+}
+
 .selected-category {
     margin: 10px 0 0 20px;
     display: flex;
@@ -21,4 +25,12 @@
     margin-left: 8px;
     width: 15px;
     filter: invert(48%) sepia(95%) saturate(639%) hue-rotate(125deg) brightness(97%) contrast(98%);
+}
+
+@media (max-width: 700px){
+    .selected-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+        margin-left: 20px;
+    }
 }

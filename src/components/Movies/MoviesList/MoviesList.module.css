@@ -1,5 +1,5 @@
 .container {
-    padding-top: 7vh;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
 }
@@ -17,4 +17,10 @@
 
     margin: 0 auto;
     padding: 3% 0;
+}
+
+@media (max-width: 700px){
+    .container {
+        padding-top: 22vh;
+    }
 }
