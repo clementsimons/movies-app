@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+// Provider
+import MoviesProvider from './contexts/movies-context/MoviesProvider';
+
+// Custom components imports
+import Header from './components/UI/Header/Header';
+import MovieCategories from "./components/Movies/MovieCategories/MovieCategories";
+import MoviesList from './components/Movies/MoviesList/MoviesList';
+import Pagination from './components/UI/Pagination/Pagination';
+
+// Styles imports
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <MoviesProvider>
+            <Header>
+                <MovieCategories />
+            </Header>
+            <MoviesList />
+            <Pagination />
+        </MoviesProvider>
+    );
 }
 
 export default App;

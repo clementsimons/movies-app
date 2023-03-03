@@ -1,0 +1,20 @@
+.container {
+    padding-top: 7vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+
+    width: 90%;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 3% 0;
+}
