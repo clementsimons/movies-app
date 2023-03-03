@@ -20,7 +20,10 @@ const Pagination = () => {
         }
     };
 
-    const maximumNumberSelectHandler = (event) => moviesContext.setMaxItems(event.target.value);
+    const maximumNumberSelectHandler = (event) => {
+        moviesContext.setMaxItems(event.target.value)
+        moviesContext.setSelectedPage(1);
+    };
 
     return (
         <div className={styles["container"]} >

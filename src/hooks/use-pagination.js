@@ -10,7 +10,7 @@ const usePagination = () => {
     const [categories, setCategories] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
 
-    const paginateListItems = useCallback((items, selectedCategories) => {
+    const paginateListItems = useCallback((items, maxItems, selectedCategories) => {
         if(selectedCategories.length > 0){}
         const newPaginatedItems = items.map((item, index) => {
             return {
@@ -23,14 +23,14 @@ const usePagination = () => {
         });
         setPaginatedItems(newPaginatedItems);
         setTotalPages(Math.ceil(items.length / maxItems));
-    }, [maxItems]);
+    }, []);
 
     useEffect(() => {
         selectedCategories.length === 0 ? 
-        paginateListItems(items, selectedCategories)
-        : paginateListItems(items.filter(item => selectedCategories.includes(item.category)), selectedCategories)
+        paginateListItems(items, maxItems, selectedCategories)
+        : paginateListItems(items.filter(item => selectedCategories.includes(item.category)), maxItems, selectedCategories)
         setCategories(Array.from(new Set(items.map(item => item.category))))
-      }, [paginateListItems, items, selectedCategories])
+      }, [paginateListItems, items, selectedCategories, maxItems])
 
     return {
         items,

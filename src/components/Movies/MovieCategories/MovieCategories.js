@@ -20,6 +20,7 @@ const MovieCategories = () => {
             moviesContext.selectedCategories.filter(categoryFromContext => categoryFromContext !== category)
             : [ ...moviesContext.selectedCategories, category ]
         moviesContext.setSelectedCategories(newCategories);
+        moviesContext.setSelectedPage(1);
     }
 
     return (
