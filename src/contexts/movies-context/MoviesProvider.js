@@ -39,8 +39,6 @@ const MoviesProvider = ({ children }) => {
         fetchMovies();
     }, [fetchMovies])
 
-    const removeMovie = (id) => {};
-
     const movieContext = {
         items,
         filteredItems,
@@ -49,7 +47,6 @@ const MoviesProvider = ({ children }) => {
         categories,
         selectedCategories,
         setMovies,
-        removeItem: removeMovie,
         setMaxItems,
         setSelectedPage,
         setSelectedCategories

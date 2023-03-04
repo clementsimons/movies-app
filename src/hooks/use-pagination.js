@@ -10,8 +10,7 @@ const usePagination = () => {
     const [categories, setCategories] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
 
-    const paginateListItems = useCallback((items, maxItems, selectedCategories) => {
-        if(selectedCategories.length > 0){}
+    const paginateListItems = useCallback((items, maxItems) => {
         const newPaginatedItems = items.map((item, index) => {
             return {
                 ...item,
@@ -27,8 +26,8 @@ const usePagination = () => {
 
     useEffect(() => {
         selectedCategories.length === 0 ? 
-        paginateListItems(items, maxItems, selectedCategories)
-        : paginateListItems(items.filter(item => selectedCategories.includes(item.category)), maxItems, selectedCategories)
+        paginateListItems(items, maxItems)
+        : paginateListItems(items.filter(item => selectedCategories.includes(item.category)), maxItems)
         setCategories(Array.from(new Set(items.map(item => item.category))))
       }, [paginateListItems, items, selectedCategories, maxItems])
 
