@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container label {
+    margin-right: 10px;
+}
+
+.container input {
+    height: 30px;
+    width: 200px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-right: 30px;
+    font-size: 0.75rem;
+    background-color: #ebebeb;
+}
+
+.container img {
+    width: 20px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}

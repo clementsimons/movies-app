@@ -1,0 +1,29 @@
+.container {
+    color: #f1f1f1;
+    margin-left: 15px;
+    font-style: italic;
+}
+
+.year-range-filter {
+    display: flex;
+    align-items: center;
+}
+
+.year-range-filter input {
+    width: 100px;
+    height: 30px;
+    margin: 0 0 0 10px;
+}
+
+.year-range-filter button {
+    width: 70px;
+    height: 30px;
+    margin: 0 0 0 10px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    border-radius: 5px;
+}
+.year-range-filter button:hover {
+    background-color: #969696;
+    cursor: pointer;
+}

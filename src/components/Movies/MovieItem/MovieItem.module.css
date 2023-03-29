@@ -1,0 +1,70 @@
+.container {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #434343;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    color: #f1f1f1;
+    position: relative;
+}
+.container a {
+    text-decoration: none;
+    color: #f1f1F1;
+}
+.container:hover {
+    cursor: pointer;
+    background-color: #3b3a3a;
+}
+.container:hover.inactive {
+    cursor: not-allowed;
+    background-color: #434343;
+}
+
+.thumbnail img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.year {
+    font-size: 0.8rem;
+}
+
+.remove {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #908e8e;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.remove:hover{
+    background-color: #5b5959;
+}
+.remove img {
+    width: 22px;
+}
+.remove img:hover {
+    filter: invert(100%) sepia(9%) saturate(4%) hue-rotate(279deg) brightness(113%) contrast(89%);
+}
